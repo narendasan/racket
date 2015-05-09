@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__),'../config','routes')
+require File.join(File.dirname(__FILE__),'route')
 
 class Router
     attr_reader :routes
