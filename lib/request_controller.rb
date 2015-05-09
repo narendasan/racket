@@ -1,6 +1,12 @@
 class RequestController
     def call(env)
-        [200, {}, ["Hello World"]]
+        route = RacketApplication.router.route_for(env)
+        if route
+            response = route.execute(env)
+            return response.rack_response
+        else 
+            return [404,{},["NOT FOUND"]]
+        end
     end
 end
 
