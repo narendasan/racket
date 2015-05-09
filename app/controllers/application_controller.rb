@@ -1,7 +1,7 @@
 class ApplicationContoller
     attr_reader :env
 
-    def intialize
+    def initialize
         @env = env
     end 
 end 

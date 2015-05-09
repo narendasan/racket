@@ -4,7 +4,7 @@ puts "lib_route LOADED" if defined?(Racket)
 class Router
     attr_reader :routes
 
-    def intialize
+    def initialize
          @routes = Hash.new { |hash,key| hash[key] = [] }
     end
 
