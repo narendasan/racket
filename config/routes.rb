@@ -1,5 +1,5 @@
 RacketApplication.router.config do
-    get "/test", :to => "custom#test"
-    get /.*/, :to => "custom#show"
+    get "/test", :to => "static.test"
+    get /.*/, :to => "static.show"
 end
 
