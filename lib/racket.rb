@@ -1,7 +1,8 @@
-require File.join(File.dirname(__FILE__),'router.rb')
+require_relative 'router'
+puts "lib_router LOADED" if defined?(Racket)
 
-class racket
-    attr_readet :router
+class Racket
+    attr_reader :router
 
     def intialize
         @router = Router.new

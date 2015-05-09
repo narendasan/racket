@@ -1,10 +1,11 @@
-require File.join(File.dirname(__FILE__),'route')
+require_relative 'route'
+puts "lib_route LOADED" if defined?(Racket)
 
 class Router
     attr_reader :routes
 
     def intialize
-         @routes = Hash.new { |hash,key|, hash[key] = [] }
+         @routes = Hash.new { |hash,key| hash[key] = [] }
     end
 
     def config &block
@@ -36,4 +37,3 @@ class Router
         {:klass => klass.capitalize+"Controller", :method => method}
     end
 end
-                
